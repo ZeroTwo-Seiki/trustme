@@ -5,6 +5,9 @@
 body {
   background-color: antiquewhite;
 }
+.second-page {
+  display: none;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -37,4 +40,58 @@ button:hover {
 }
 .video {
   display: none;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: okie;
+  animation-duration: 5s;
+}
+.loader .left {
+  animation-name: left;
+  animation-duration: 4.5s;
+}
+.loader .right {
+  animation-name: right;
+  animation-duration: 4.5s;
+}
+@keyframes okie {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 100;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes left {
+  0% {
+    transform: translateX(300px);
+  }
+  25% {
+    transform: translateX(-100px);
+  }
+}
+@keyframes right {
+  0% {
+    transform: translateX(300px);
+  }
+  25% {
+    transform: translateX(100px);
+  }
+}
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
